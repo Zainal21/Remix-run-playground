@@ -1,14 +1,11 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Link } from "@remix-run/react";
+import cn from "classnames";
 
 const navigation = [
   { name: "Dashboard", href: "/", current: true },
   { name: "Jokes🥴", href: "/jokes", current: false },
 ];
-
-function classNames(...classes: String[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function HeadersPage() {
   return (
@@ -31,7 +28,7 @@ export default function HeadersPage() {
                       <Link
                         key={item.name}
                         to={item.href}
-                        className={classNames(
+                        className={cn(
                           item.current
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
@@ -82,7 +79,7 @@ export default function HeadersPage() {
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className={classNames(
+                  className={cn(
                     item.current
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
