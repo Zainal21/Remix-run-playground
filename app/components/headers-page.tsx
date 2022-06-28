@@ -3,7 +3,7 @@ import { Link } from "@remix-run/react";
 import cn from "classnames";
 
 const navigation = [
-  { name: "Dashboard", href: "/", current: true },
+  { name: "Dashboard", href: "/", current: false },
   { name: "Jokes🥴", href: "/jokes", current: false },
 ];
 
